@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd01
+  namespace: sushant
+spec:
+  selector:
+    matchLabels:
+      run: httpd01
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: httpd01
+    spec:
+      containers:
+      - name: httpd01
+        image: httpd
+        ports:
+        - containerPort: 80
+
+

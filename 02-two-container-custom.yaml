@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-containers
+spec:
+
+  restartPolicy: Never
+
+  containers:
+
+  - name: nginx-container01
+    image: nginx
+    ports: 
+    - containerPort: 6080
+
+  - name: nginx-container02
+    image: nginx
+    ports:
+    - containerPort: 6081
+
+  - name: nginx-container03
+    image: nginx
+    ports:
+    - containerPort: 6082

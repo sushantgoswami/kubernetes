@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-nginx
+  namespace: sushant
+
+spec:
+  selector:
+    matchLabels:
+      run: my-nginx-as-daemonset
+
+  template:
+    metadata:
+      labels:
+        run: my-nginx-as-daemonset
+    spec:
+      containers:
+      - name: my-nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+

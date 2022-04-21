@@ -1,0 +1,1 @@
+kubectl proxy -p 10000 --address=192.168.137.10 --disable-filter=true

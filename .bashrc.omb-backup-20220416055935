@@ -1,0 +1,22 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+alias kc='kubectl'
+alias ka='kubeadm'
+alias kcget='kubectl get'
+alias kcdel='kubectl delete'
+alias kclog='kubectl logs'
+alias kcdes='kubectl describe'
+alias kcrun='kubectl run'
+alias kcgetpo='kc get pods --all-namespaces'
+alias kcgetpow='kc get pods --all-namespaces -o wide'
